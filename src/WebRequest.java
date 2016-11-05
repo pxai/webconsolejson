@@ -50,6 +50,7 @@ public class WebRequest {
             // Create the HttpConnection
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestProperty("User-Agent", userAgent);
+            connection.setRequestProperty("Accept", "application/json");
             connection.setRequestMethod("GET");
             setCookies(connection);
 
@@ -98,6 +99,7 @@ public class WebRequest {
 		        HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 		        connection.setRequestMethod("POST");
 		        connection.setRequestProperty("User-Agent", userAgent); 
+		        connection.setRequestProperty("Accept", "application/json");
 		        connection.setDoOutput(true);
 		        setCookies(connection);
 
