@@ -26,7 +26,7 @@ public class Main {
 		//////////////////////////////////////////// JSON POST ///////////////////////////
 		String json = "{\"beat\":{\"id\":1,\"message\":\"epa\",\"idto\":1,\"latitude\":6,\"longitude\":1}}";
 		
-		String urlPost = "http://localhost/2dam-project-multisite/web/app_dev.php/admin/api/form/beat/create";
+		String urlPost = "http://bizgen.co/web/admin/api/form/beat/create";
 
 			if (webRequest.postJson(urlPost, json)) {
 				System.out.println("OK POST: " + webRequest.getResponseString() + "\n" + webRequest.getResponseCode());
@@ -36,6 +36,9 @@ public class Main {
 			
 			// "{\"item\":{\"id\":1,\"name\":\"yeah\",\"description\":\"Ok\",\"status\":1}}"
 			// /admin/api/form/item/create
+
+			// {\"idea\":{\"id\":1,\"name\":\"aaaa\",\"description\":\"aaaabbbb\",\"latitude\":6,\"longitude\":1}}
+			// /admin/api/form/idea/create
 			
 			// {\"beat\":{\"id\":1,\"message\":\"aaaa\",\"idto\":1,\"latitude\":6,\"longitude\":1}}
 			// /admin/api/form/beat/create
