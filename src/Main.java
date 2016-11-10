@@ -10,6 +10,7 @@ public class Main {
 	public static void main (String args[]) {
 		WebRequest webRequest = new WebRequest();
 		
+		///////////////////////////////// GET REQUEST ////////////////////////////
 		if (webRequest.get("http://wzw.io/web/admin/api/meetup")) {
 			System.out.println("OK Total: " + webRequest.getResponseString());
 		} else {
@@ -23,10 +24,13 @@ public class Main {
 			System.out.println(meetups.getJSONObject(i).getString("name"));
 		}
 		
-		//////////////////////////////////////////// JSON POST ///////////////////////////
-		String json = "{\"beat\":{\"id\":1,\"message\":\"epa\",\"idto\":1,\"latitude\":6,\"longitude\":1}}";
 		
-		String urlPost = "http://bizgen.co/web/admin/api/form/beat/create";
+		
+		///////////////////////////////// JSON POST ///////////////////////////
+		String json = "{\"meetup\":{\"id\":1,\"name\":\"aaaa\",\"description\":\"aaaabbbb\",\"latitude\":6,\"longitude\":1,\"open\":1}}";
+		String urlPost = "http://bizgen.co/web/app_dev.php"+ "/admin/api/form/meetup/create";
+		
+		//String urlPost = "http://localhost/2dam-project-multisite/web/app_dev.php/admin/api/form/idea/create";
 
 			if (webRequest.postJson(urlPost, json)) {
 				System.out.println("OK POST: " + webRequest.getResponseString() + "\n" + webRequest.getResponseCode());
