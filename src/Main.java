@@ -27,7 +27,7 @@ public class Main {
 		
 		
 		///////////////////////////////// JSON POST ///////////////////////////
-		String json = "{\"meetup\":{\"id\":1,\"name\":\"aaaa\",\"description\":\"aaaabbbb\",\"latitude\":6,\"longitude\":1,\"open\":1}}";
+		String json = "{\"meetup\":{\"id\":1,\"name\":\"Echar fichas\",\"description\":\"echar a todo\",\"latitude\":6,\"longitude\":1,\"open\":1}}";
 		String urlPost = "http://bizgen.co/web/app_dev.php"+ "/admin/api/form/meetup/create";
 		
 		//String urlPost = "http://localhost/2dam-project-multisite/web/app_dev.php/admin/api/form/idea/create";
